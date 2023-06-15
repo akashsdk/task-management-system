@@ -1,6 +1,6 @@
 import React from 'react'
-import Home from './Home'
 import { Button, Form, Input } from 'antd';
+import { Link } from "react-router-dom";
 
 export default function LogIn() {
   return (
@@ -45,7 +45,7 @@ export default function LogIn() {
         <Input.Password />
       </Form.Item>
       <Button htmlType="button" >
-          LogIn
+      <Link to="/"> Log In</Link>
         </Button>
       </Form>
     </div>
