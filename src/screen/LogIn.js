@@ -1,6 +1,6 @@
 import React from 'react'
 import Home from './Home'
-import { Button, Form, Input, Select } from 'antd';
+import { Button, Form, Input } from 'antd';
 
 export default function LogIn() {
   return (
