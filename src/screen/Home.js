@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import MainHeader from "../component/Header";
 import Dashboard from "../component/Dashboard";
+import Assignment from "../component/Assignment";
+import TaskFiltering from "../component/TaskFiltering";
+import Comments from "../component/Comments";
 
 import {
   PieChartOutlined,
@@ -137,15 +140,15 @@ export default function Home() {
                   </div>
                 ) : page === 2 ? (
                   <div>
-                    <p>Page 2 </p>
+                    <Assignment/>
                   </div>
                 ) : page === 3 ? (
                   <div>
-                    <p>Page 3</p>
+                    <Comments/>
                   </div>
                 ) :  page === 4 ? (
                   <div>
-                    <p>Page 4</p>
+                    <TaskFiltering/>
                   </div>
                 ) :  (
                   <p>Page Error</p>
