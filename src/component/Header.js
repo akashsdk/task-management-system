@@ -18,9 +18,9 @@ export default function Header() {
         alignItems: "center",
       }}
     >
-      <h2 style={{
-        flex:'10'
-      }} >Task Management System </h2>
+      <h2  style={{
+        flex:'5',
+      }}>Task Management System </h2>
       <Button htmlType="button" style={{
         flex:'.1'
       }}>
