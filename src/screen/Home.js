@@ -3,14 +3,13 @@ import MainHeader from "../component/Header";
 import Dashboard from "../component/Dashboard";
 
 import {
-  FileOutlined,
   PieChartOutlined,
-  UserOutlined,
-  DesktopOutlined,
-  TeamOutlined,
+  FileProtectOutlined, 
+  CommentOutlined,
+  SortAscendingOutlined,
 } from "@ant-design/icons";
-import { Breadcrumb, Button, Layout, Menu, theme } from "antd";
-const { Header, Content, Footer, Sider } = Layout;
+import { Breadcrumb,  Layout, Menu, theme } from "antd";
+const { Header, Content,  Sider } = Layout;
 function getItem(label, key, icon, children) {
   return {
     key,
@@ -35,7 +34,7 @@ export default function Home() {
     getItem(
       "Assignment",
       "2",
-      <DesktopOutlined
+      <FileProtectOutlined
         onClick={() => {
           setPage(2);
         }}
@@ -44,7 +43,7 @@ export default function Home() {
     getItem(
       "Comments",
       "3",
-      <DesktopOutlined
+      <CommentOutlined
         onClick={() => {
           setPage(3);
         }}
@@ -53,21 +52,13 @@ export default function Home() {
     getItem(
       "Task Filtering",
       "4",
-      <DesktopOutlined
+      <SortAscendingOutlined
         onClick={() => {
           setPage(4);
         }}
       />
     ),
-    getItem(
-      "Responsive Design",
-      "5",
-      <DesktopOutlined
-        onClick={() => {
-          setPage(5);
-        }}
-      />
-    ),
+    
   ];
   const [collapsed, setCollapsed] = useState(false);
 
@@ -126,8 +117,6 @@ export default function Home() {
                     <p>Task Details and Comments</p>
                 ) :  page === 4 ? (
                     <p>Task Filtering and Sorting</p>
-                ) :  page === 5 ? (
-                    <p>Responsive Design</p>
                 ) : (
                   <p>Page Error</p>
                 )}
@@ -144,7 +133,7 @@ export default function Home() {
               >
                 {page === 1 ? (
                   <div>
-                    <p>Page 1 </p>
+                    <Dashboard/>
                   </div>
                 ) : page === 2 ? (
                   <div>
@@ -158,11 +147,7 @@ export default function Home() {
                   <div>
                     <p>Page 4</p>
                   </div>
-                ) : page === 5 ? (
-                  <div>
-                    <p>Page 5</p>
-                  </div>
-                ) : (
+                ) :  (
                   <p>Page Error</p>
                 )}
               </div>
