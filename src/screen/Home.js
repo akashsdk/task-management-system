@@ -7,12 +7,12 @@ import Comments from "../component/Comments";
 
 import {
   PieChartOutlined,
-  FileProtectOutlined, 
+  FileProtectOutlined,
   CommentOutlined,
   SortAscendingOutlined,
 } from "@ant-design/icons";
-import { Breadcrumb,  Layout, Menu, theme } from "antd";
-const { Header, Content,  Sider, Footer } = Layout;
+import { Breadcrumb, Button, Layout, Menu, theme } from "antd";
+const { Header, Content, Sider, Footer } = Layout;
 function getItem(label, key, icon, children) {
   return {
     key,
@@ -59,10 +59,8 @@ export default function Home() {
         onClick={() => {
           setPage(4);
         }}
-      />,
-      
-    ) ,
-    
+      />
+    ),
   ];
   const [collapsed, setCollapsed] = useState(false);
 
@@ -96,7 +94,7 @@ export default function Home() {
               style={{
                 padding: 0,
                 background: colorBgContainer,
-                marginTop:'-64px'
+                marginTop: "-64px",
               }}
             />
             <Content
@@ -111,22 +109,20 @@ export default function Home() {
               >
                 <Breadcrumb.Item>User</Breadcrumb.Item>
                 <Breadcrumb.Item>
-                <div style={{marginTop:'-13px'}}>
-
-                {page === 1 ? (
-                    <p >Dashboard </p>
-                ) : page === 2 ? (
-                    <p>Task Creation and Assignment </p>
-                ) : page === 3 ? (
-                    <p>Task Details and Comments</p>
-                ) :  page === 4 ? (
-                    <p>Task Filtering and Sorting</p>
-                ) : (
-                  <p>Page Error</p>
-                )}
-                </div>
+                  <div style={{ marginTop: "-13px" }}>
+                    {page === 1 ? (
+                      <p>Dashboard </p>
+                    ) : page === 2 ? (
+                      <p>Task Creation and Assignment </p>
+                    ) : page === 3 ? (
+                      <p>Task Details and Comments</p>
+                    ) : page === 4 ? (
+                      <p>Task Filtering and Sorting</p>
+                    ) : (
+                      <p>Page Error</p>
+                    )}
+                  </div>
                 </Breadcrumb.Item>
-
               </Breadcrumb>
               <div
                 style={{
@@ -137,32 +133,34 @@ export default function Home() {
               >
                 {page === 1 ? (
                   <div>
-                    <Dashboard/>
+                    <Dashboard />
                   </div>
                 ) : page === 2 ? (
                   <div>
-                    <Assignment/>
+                    <Assignment />
                   </div>
                 ) : page === 3 ? (
                   <div>
-                    <Comments/>
+                    <Comments />
                   </div>
-                ) :  page === 4 ? (
+                ) : page === 4 ? (
                   <div>
-                    <TaskFiltering/>
+                    <TaskFiltering />
                   </div>
-                ) :  (
+                ) : (
                   <p>Page Error</p>
                 )}
               </div>
             </Content>
             <Footer
-          style={{
-            textAlign: 'center',
-          }}
-        >
-          Task Management System ©2023 Created by Akash
-        </Footer>
+              style={{
+                textAlign: "center",
+              }}
+            >
+              <Button type="link" href="https://twitter.com/tasnimSakash">
+                Task Management System ©2023 Created by Akash
+              </Button>
+            </Footer>
           </Layout>
         </Layout>
       </div>
