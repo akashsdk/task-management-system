@@ -20,7 +20,7 @@ export default function Header() {
     >
       <h2  style={{
         flex:'5',
-      }}>Task Management System </h2>
+      }}> Icon</h2>
       <Button htmlType="button" style={{
         flex:'.1'
       }}>
