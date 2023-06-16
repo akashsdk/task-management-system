@@ -17,13 +17,7 @@ function getItem(label, key, icon, children) {
 const items = [
   getItem('Option 1', '1', <PieChartOutlined />),
   getItem('Option 2', '2', <DesktopOutlined />),
-  getItem('User', 'sub1', <UserOutlined />, [
-    getItem('Tom', '3'),
-    getItem('Bill', '4'),
-    getItem('Alex', '5'),
-  ]),
-  getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
-  getItem('Files', '9', <FileOutlined />),
+  
 ];
 
 export default function Home() {
@@ -74,13 +68,7 @@ export default function Home() {
             Bill is a cat.
           </div>
         </Content>
-        <Footer
-          style={{
-            textAlign: 'center',
-          }}
-        >
-          Ant Design ©2023 Created by Ant UED
-        </Footer>
+        
       </Layout>
     </Layout>
       </div>
