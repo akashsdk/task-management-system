@@ -59,8 +59,9 @@ export default function Home() {
         onClick={() => {
           setPage(4);
         }}
-      />
-    ),
+      />,
+      
+    ) ,
     
   ];
   const [collapsed, setCollapsed] = useState(false);
