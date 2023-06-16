@@ -32,6 +32,9 @@ export default function Home() {
         onClick={() => {
           setPage(1);
         }}
+        style={{
+          fontSize:'20px'
+        }}
       />
     ),
     getItem(
@@ -40,6 +43,9 @@ export default function Home() {
       <FileProtectOutlined
         onClick={() => {
           setPage(2);
+        }}
+        style={{
+          fontSize:'20px'
         }}
       />
     ),
@@ -50,6 +56,9 @@ export default function Home() {
         onClick={() => {
           setPage(3);
         }}
+        style={{
+          fontSize:'20px'
+        }}
       />
     ),
     getItem(
@@ -58,6 +67,9 @@ export default function Home() {
       <SortAscendingOutlined
         onClick={() => {
           setPage(4);
+        }}
+        style={{
+          fontSize:'20px'
         }}
       />
     ),
