@@ -20,7 +20,7 @@ export default function Header() {
     >
       <h2  style={{
         flex:'5',
-      }}> Icon</h2>
+      }}> Icon / Name</h2>
       <Button htmlType="button" style={{
         flex:'.1'
       }}>

@@ -12,7 +12,7 @@ import {
   SortAscendingOutlined,
 } from "@ant-design/icons";
 import { Breadcrumb,  Layout, Menu, theme } from "antd";
-const { Header, Content,  Sider } = Layout;
+const { Header, Content,  Sider, Footer } = Layout;
 function getItem(label, key, icon, children) {
   return {
     key,
@@ -156,6 +156,13 @@ export default function Home() {
                 )}
               </div>
             </Content>
+            <Footer
+          style={{
+            textAlign: 'center',
+          }}
+        >
+          Task Management System ©2023 Created by Akash
+        </Footer>
           </Layout>
         </Layout>
       </div>
